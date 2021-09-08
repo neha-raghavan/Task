@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Flask Tutorial</title>
+  </head>
+  <body>
+   <button onclick="myFunction()">Roll the dice</button>
+   <p id="demo"></p>
+    <p id="result"></p>
+   <script>
+     score=0;
+     function myFunction() {
+        var num=Math.floor(Math.random() * 6) + 1;
+        score+=num
+        if (score%7==0)
+        {
+          score=0;
+        }
+        if(score==100)
+        {
+              alert("Congratulations");
+        }
+        document.getElementById("demo").innerHTML = num;
+        document.getElementById("result").innerHTML = score;
+    }
+   </script>
+  </body>
+</html>
